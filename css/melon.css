@@ -1,0 +1,71 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Pretendard', sans-serif; color: #333; background: #fff; }
+ul { list-style: none; }
+button { font-family: inherit; cursor: pointer; }
+
+.wrap { max-width: 1200px; margin: 0 auto; padding: 40px 20px 80px; }
+.page-title { font-size: 32px; font-weight: 700; margin-bottom: 28px; }
+.page-title em { font-style: normal; color: #00cd3c; }
+.sec-title { font-size: 22px; font-weight: 700; margin: 56px 0 8px; }
+
+/* ----- 슬라이드 (1~12위) ----- */
+.top { position: relative; }
+.top-swiper { overflow: hidden; }
+.top-swiper .swiper-slide { width: 288px; }
+.card-cover { position: relative; border-radius: 10px; overflow: hidden; aspect-ratio: 1 / 1; background: #eee; }
+.card-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.card-rank {
+    position: absolute; top: 8px; left: 14px;
+    font-size: 40px; font-style: italic; font-weight: 300; color: #fff;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, .55);
+}
+.card-title { margin-top: 14px; font-size: 20px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card-meta { margin-top: 6px; font-size: 15px; color: #666; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card-actions { display: flex; gap: 6px; margin-top: 14px; }
+.like-btn {
+    display: flex; align-items: center; gap: 6px; padding: 0 14px; height: 44px;
+    border: 1px solid #e5e5e5; border-radius: 4px; background: #fff; color: #53359a; font-size: 14px;
+}
+.like-btn .heart { color: #aaa; font-size: 18px; }
+.like-btn.on .heart { color: #e5384f; }
+.play-btn {
+    flex: 1; height: 44px; border: 0; border-radius: 4px;
+    background: #53359a; color: #fff; font-size: 16px;
+}
+.play-btn:hover { background: #432a80; }
+
+.top-nav { display: flex; justify-content: center; gap: 10px; margin-top: 24px; }
+.nav-btn {
+    width: 40px; height: 40px; border-radius: 50%; border: 1px solid #ddd; background: #fff;
+    font-size: 22px; line-height: 1; color: #555;
+}
+.nav-btn:hover { border-color: #53359a; color: #53359a; }
+.nav-btn.swiper-button-disabled { opacity: .35; cursor: default; }
+
+/* ----- 목록 (13위~) ----- */
+.chart-list li {
+    display: flex; align-items: center; gap: 24px;
+    padding: 24px 0; border-bottom: 1px solid #e5e5e5;
+}
+.chart-list .rank { flex: 0 0 48px; font-size: 24px; font-weight: 600; text-align: center; color: #00a82d; }
+.chart-list .cover { flex: 0 0 100px; width: 100px; height: 100px; border-radius: 6px; object-fit: cover; background: #eee; border: 1px solid #eee; }
+.chart-list .info { flex: 1; min-width: 0; }
+.chart-list .title { font-size: 18px; font-weight: 600; color: #222; }
+.chart-list .artist { margin-top: 8px; font-size: 14px; color: #666; }
+.chart-list .likes { margin-top: 10px; font-size: 14px; color: #53359a; }
+.chart-list .likes .heart { color: #e5384f; margin-right: 4px; }
+.chart-list .btns { display: flex; flex-direction: column; gap: 6px; flex: 0 0 110px; }
+.btn-line, .btn-fill { height: 38px; border-radius: 4px; font-size: 14px; }
+.btn-line { border: 1px solid #ddd; background: #fff; color: #333; }
+.btn-fill { border: 0; background: #666; color: #fff; }
+
+.error { padding: 40px 0; text-align: center; color: #c00; }
+
+@media (max-width: 640px) {
+    .page-title { font-size: 26px; }
+    .top-swiper .swiper-slide { width: 220px; }
+    .chart-list li { gap: 12px; }
+    .chart-list .rank { flex-basis: 32px; font-size: 18px; }
+    .chart-list .cover { flex-basis: 72px; width: 72px; height: 72px; }
+    .chart-list .btns { flex-basis: 80px; }
+}

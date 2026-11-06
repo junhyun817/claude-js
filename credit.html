@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>크레딧노트</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/credit.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="top-links">
+            <a href="#">로그인</a><a href="#">회원가입</a>
+        </div>
+        <header class="header">
+            <div class="logo">
+                <div class="logo-mark"></div>
+                <span class="logo-text">크레딧온</span>
+            </div>
+            <div class="header-menu">
+                <div class="menu-wrapper">
+                    <span class="menu-btn">전체메뉴
+                        <span class="burger"><span></span><span></span><span></span></span>
+                    </span>
+                    <div class="menu-dropdown">
+                        <a href="#" class="menu-item">신용점수 확인</a>
+                        <a href="#" class="menu-item">마이페이지</a>
+                        <a href="#" class="menu-item">로그인</a>
+                        <a href="#" class="menu-item">회원가입</a>
+                    </div>
+                </div>
+                <span class="search-btn" id="search"></span>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="swiper hero-swiper">
+                <div class="swiper-wrapper" id="heroTrack"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="protect">
+            <div class="guards" id="guards"></div>
+            <div class="banners">
+                <div class="banner hue-258">
+                    <div>
+                        <div class="eyebrow">개인정보 보호 서비스</div>
+                        <div class="title">명의 알림 번호 등록하기</div>
+                    </div>
+                    <div class="banner-img"></div>
+                </div>
+                <div class="banner hue-80">
+                    <div>
+                        <div class="eyebrow">점수 변동 없이</div>
+                        <div class="title">예상 대출한도 확인하기</div>
+                    </div>
+                    <div class="banner-img"></div>
+                </div>
+            </div>
+        </section>
+
+        <h2>이런 서비스는 어떠세요?</h2>
+        <section class="services" id="services"></section>
+
+        <section class="promo">
+            <div class="ad">
+                <div>
+                    <div class="ad-title">제휴 저축은행 신용대출</div>
+                    <div class="ad-desc">예상 한도가 도착했어요<br>지금 확인하기 ›</div>
+                    <div class="ad-note">광고 · 심의번호 표기 영역</div>
+                </div>
+                <div class="placeholder">ad img</div>
+            </div>
+            <div class="banner">
+                <div>
+                    <div class="eyebrow">이번 달</div>
+                    <div class="title">혜택 좋은 카드는?</div>
+                </div>
+                <div class="card-img placeholder">card img</div>
+            </div>
+        </section>
+
+        <h2>모르면 손해, 놓치면 아쉬운 <em>혜택 정보</em></h2>
+        <section class="benefits" id="benefits"></section>
+
+        <h2>놓치기 쉬운 금융 혜택</h2>
+        <section class="perks" id="perks"></section>
+
+        <div class="notice" id="notice">
+            <span class="notice-label">알려드려요 ›</span>
+            <span class="notice-text">신용변동 알림 서비스 정기 점검 안내</span>
+            <span class="notice-date">2026.09.23</span>
+        </div>
+    </div>
+
+    <div class="search-modal" id="searchModal">
+        <div class="search-overlay" id="searchOverlay"></div>
+        <div class="search-content">
+            <div class="search-header">
+                <input type="text" class="search-input" placeholder="메뉴, 요금제 등을 검색해 보세요">
+                <button class="search-close" id="searchClose">×</button>
+            </div>
+            <div class="search-body">
+                <div class="search-section">
+                    <div class="search-section-title">최근 검색어</div>
+                    <div class="search-section-content">
+                        <p class="search-empty">최근 검색한 내역이 없습니다.</p>
+                    </div>
+                </div>
+
+                <div class="search-section">
+                    <div class="search-section-title">인기 검색어</div>
+                    <div class="search-section-content">
+                        <div class="search-list">
+                            <div class="search-item">
+                                <span class="search-rank">1</span>
+                                <span class="search-text">로밍</span>
+                            </div>
+                            <div class="search-item">
+                                <span class="search-rank">2</span>
+                                <span class="search-text">골머니</span>
+                            </div>
+                            <div class="search-item">
+                                <span class="search-rank">3</span>
+                                <span class="search-text">쿠폰</span>
+                            </div>
+                            <div class="search-item">
+                                <span class="search-rank">4</span>
+                                <span class="search-text">남부</span>
+                            </div>
+                            <div class="search-item">
+                                <span class="search-rank">5</span>
+                                <span class="search-text">이벤트</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-section">
+                    <div class="search-section-title">추천 검색어</div>
+                    <div class="search-section-content">
+                        <div class="search-tags">
+                            <button class="search-tag">유심 신청</button>
+                            <button class="search-tag">이벤트</button>
+                            <button class="search-tag">나만의 요금제 찾기</button>
+                            <button class="search-tag">친구추천</button>
+                            <button class="search-tag">친구결합</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-section">
+                    <div class="search-chatbot">
+                        <div class="search-chatbot-icon">💬</div>
+                        <div class="search-chatbot-text">챗봇에게 물어보세요!</div>
+                        <span class="search-chatbot-arrow">›</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <nav class="footer-nav">
+                    <a href="#">회사소개</a><a href="#" class="strong">개인정보처리방침</a><a href="#">이용약관</a><a href="#">신용평점체계 공시</a><a href="#">저작권 정책</a><a href="#">사이트맵</a>
+                </nav>
+                <div class="footer-info">
+                    (주)크레딧온 · 서울특별시 ○○구 ○○로 00 · 대표이사 홍길동<br>
+                    사업자등록번호 000-00-00000 · 통신판매업신고 0000-서울○○-0000호<br>
+                    © CREDITON INC. ALL RIGHTS RESERVED.
+                </div>
+            </div>
+            <div class="contact">
+                <div class="contact-line"><span>고객센터</span><b>1600-0000</b></div>
+                <div class="contact-mail">help@crediton.example</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/credit.js"></script>
+</body>
+</html>
